@@ -14,7 +14,7 @@ Godot 4
 
 ## MVP Features
 - Four rhythm lanes
-- D/F/J/K controls
+- A/S/F/D controls
 - Music playback
 - Note chart system
 - Timing judgement

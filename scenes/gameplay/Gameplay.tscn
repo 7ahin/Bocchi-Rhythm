@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://d0nd0u24oiypx"]
+
+[ext_resource type="Script" uid="uid://327d6ji1pg0o" path="res://scripts/rhythm/input_test.gd" id="1_e2rtc"]
+
+[node name="Gameplay" type="Control" unique_id=96343168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2rtc")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2072561462]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1871106761]
+layout_mode = 2
+
+[node name="Lane1" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=531778875]
+custom_minimum_size = Vector2(120, 500)
+layout_mode = 2
+color = Color(0.84630424, 0.11649465, 0.19610763, 1)
+
+[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane1" unique_id=939328893]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "A"
+horizontal_alignment = 1
+
+[node name="Lane2" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=1778894861]
+custom_minimum_size = Vector2(120, 500)
+layout_mode = 2
+color = Color(1, 0.654902, 0.8666667, 1)
+
+[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane2" unique_id=988727883]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "S"
+horizontal_alignment = 1
+
+[node name="Lane3" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=919824724]
+custom_minimum_size = Vector2(120, 500)
+layout_mode = 2
+color = Color(1, 1, 0.32156864, 1)
+
+[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane3" unique_id=1264660446]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "D"
+horizontal_alignment = 1
+
+[node name="Lane4" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=1908094802]
+custom_minimum_size = Vector2(120, 500)
+layout_mode = 2
+color = Color(0.2627451, 0.14117648, 1, 1)
+
+[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane4" unique_id=1151312433]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "F"
+horizontal_alignment = 1
