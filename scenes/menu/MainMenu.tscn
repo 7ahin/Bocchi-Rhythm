@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ri1o26bt38fw"]
+
+[node name="MainMenu" type="Control" unique_id=968832512]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2029075029]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=302167016]
+layout_mode = 2
+
+[node name="BOCCHI RHYTHM" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1803310945]
+layout_mode = 2
+
+[node name="PLAY" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1963060305]
+layout_mode = 2
+
+[node name="SETTINGS" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1761527536]
+layout_mode = 2
+
+[node name="EXIT" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1353489776]
+layout_mode = 2
