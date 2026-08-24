@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0nd0u24oiypx"]
 
 [ext_resource type="Script" uid="uid://327d6ji1pg0o" path="res://scripts/rhythm/input_test.gd" id="1_e2rtc"]
+[ext_resource type="PackedScene" uid="uid://ch2mn71hj3pda" path="res://scenes/gameplay/Note.tscn" id="2_hhfdu"]
 
 [node name="Gameplay" type="Control" unique_id=96343168]
 layout_mode = 3
@@ -23,6 +24,13 @@ layout_mode = 2
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
 color = Color(0.84630424, 0.11649465, 0.19610763, 1)
+
+[node name="Note" parent="CenterContainer/HBoxContainer/Lane1" unique_id=535316708 instance=ExtResource("2_hhfdu")]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 10.0
+offset_right = 85.0
+offset_bottom = 30.0
 
 [node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane1" unique_id=939328893]
 layout_mode = 1
@@ -86,3 +94,10 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "F"
 horizontal_alignment = 1
+
+[node name="JudgementLine" type="ColorRect" parent="." unique_id=1552855892]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 430.0
+offset_right = 491.0
+offset_bottom = 436.0

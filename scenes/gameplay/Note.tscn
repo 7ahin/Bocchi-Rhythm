@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ch2mn71hj3pda"]
+
+[ext_resource type="Script" uid="uid://bxrrm86dry3kp" path="res://scripts/rhythm/note.gd" id="1_be0hr"]
+
+[node name="Note" type="ColorRect" unique_id=535316708]
+offset_right = 50.0
+offset_bottom = 20.0
+script = ExtResource("1_be0hr")
