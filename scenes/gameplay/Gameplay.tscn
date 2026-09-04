@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://dn2ffi6kngx7y" path="res://scripts/core/audio_manager.gd" id="3_ytj2m"]
 [ext_resource type="AudioStream" uid="uid://d3pfh1v11v36j" path="res://assets/audio/UEFA EURO 2024 Intro (4K).wav" id="4_jfjcr"]
 [ext_resource type="Script" uid="uid://75pomls1ekc6" path="res://scripts/rhythm/judgement_manager.gd" id="5_jfjcr"]
+[ext_resource type="Script" uid="uid://bcrhapcqkhl86" path="res://scripts/rhythm/score_manager.gd" id="6_73nc4"]
+[ext_resource type="Script" uid="uid://c1qyxw4dm6hyu" path="res://scripts/rhythm/chart_manager.gd" id="7_nf2y2"]
 
 [node name="Gameplay" type="Control" unique_id=96343168]
 layout_mode = 3
@@ -16,19 +18,46 @@ grow_vertical = 2
 script = ExtResource("1_e2rtc")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2072561462]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1871106761]
+[node name="Playfield" type="Control" parent="CenterContainer" unique_id=1573843057]
+custom_minimum_size = Vector2(480, 500)
 layout_mode = 2
 
-[node name="Lane1" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=531778875]
+[node name="JudgementLabel" type="Label" parent="CenterContainer/Playfield" unique_id=1264051209]
+z_index = 20
+layout_mode = 0
+offset_top = 330.0
+offset_right = 480.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 28
+text = "\"\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JudgementLine" type="ColorRect" parent="CenterContainer/Playfield" unique_id=1552855892]
+z_index = 10
+layout_mode = 0
+offset_top = 430.0
+offset_right = 480.0
+offset_bottom = 436.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Playfield" unique_id=1871106761]
+layout_mode = 0
+offset_right = 492.0
+offset_bottom = 500.0
+
+[node name="Lane1" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=531778875]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
 color = Color(0.84630424, 0.11649465, 0.19610763, 1)
 
-[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane1" unique_id=939328893]
+[node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane1" unique_id=939328893]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -40,12 +69,12 @@ grow_vertical = 0
 text = "A"
 horizontal_alignment = 1
 
-[node name="Lane2" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=1778894861]
+[node name="Lane2" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=1778894861]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
 color = Color(1, 0.654902, 0.8666667, 1)
 
-[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane2" unique_id=988727883]
+[node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane2" unique_id=988727883]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -57,12 +86,12 @@ grow_vertical = 0
 text = "S"
 horizontal_alignment = 1
 
-[node name="Lane3" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=919824724]
+[node name="Lane3" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=919824724]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
 color = Color(1, 1, 0.32156864, 1)
 
-[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane3" unique_id=1264660446]
+[node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane3" unique_id=1264660446]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -74,12 +103,12 @@ grow_vertical = 0
 text = "D"
 horizontal_alignment = 1
 
-[node name="Lane4" type="ColorRect" parent="CenterContainer/HBoxContainer" unique_id=1908094802]
+[node name="Lane4" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=1908094802]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
 color = Color(0.2627451, 0.14117648, 1, 1)
 
-[node name="KeyLabel" type="Label" parent="CenterContainer/HBoxContainer/Lane4" unique_id=1151312433]
+[node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane4" unique_id=1151312433]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -90,13 +119,6 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "F"
 horizontal_alignment = 1
-
-[node name="JudgementLine" type="ColorRect" parent="." unique_id=1552855892]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 430.0
-offset_right = 491.0
-offset_bottom = 436.0
 
 [node name="NoteSpawner" type="Node" parent="." unique_id=1354776395]
 script = ExtResource("2_hhfdu")
@@ -109,3 +131,36 @@ stream = ExtResource("4_jfjcr")
 
 [node name="JudgementManager" type="Node" parent="." unique_id=319944895]
 script = ExtResource("5_jfjcr")
+
+[node name="ScoreManager" type="Node" parent="." unique_id=1415614958]
+script = ExtResource("6_73nc4")
+
+[node name="HUD" type="Control" parent="." unique_id=1912001579]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD" unique_id=1400161463]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 221.0
+offset_bottom = 96.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/MarginContainer" unique_id=16471478]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=2019088021]
+layout_mode = 2
+text = "SCORE: 0
+"
+
+[node name="ComboLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=2085478737]
+layout_mode = 2
+text = "COMBO: 0"
+
+[node name="ChartManager" type="Node" parent="." unique_id=502492149]
+script = ExtResource("7_nf2y2")

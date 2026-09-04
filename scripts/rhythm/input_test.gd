@@ -1,15 +1,15 @@
 extends Control
 
-@onready var lane_1 = $CenterContainer/HBoxContainer/Lane1
-@onready var lane_2 = $CenterContainer/HBoxContainer/Lane2
-@onready var lane_3 = $CenterContainer/HBoxContainer/Lane3
-@onready var lane_4 = $CenterContainer/HBoxContainer/Lane4
-
+@onready var lane_1 = $CenterContainer/Playfield/HBoxContainer/Lane1
+@onready var lane_2 = $CenterContainer/Playfield/HBoxContainer/Lane2
+@onready var lane_3 = $CenterContainer/Playfield/HBoxContainer/Lane3
+@onready var lane_4 = $CenterContainer/Playfield/HBoxContainer/Lane4
+@onready var hbox = $CenterContainer/Playfield/HBoxContainer
+@onready var judgement_line = $CenterContainer/Playfield/JudgementLine
 @onready var judgement_manager = $JudgementManager
 
 var idle_color = Color("#303038")
 var pressed_color = Color("#f2d45c")
-
 
 func _ready():
 	lane_1.color = idle_color
@@ -17,6 +17,11 @@ func _ready():
 	lane_3.color = idle_color
 	lane_4.color = idle_color
 
+	call_deferred("sync_judgement_line")
+
+func sync_judgement_line():
+	judgement_line.position.x = hbox.position.x
+	judgement_line.size.x = hbox.size.x
 
 func _process(_delta):
 

@@ -48,3 +48,7 @@ func _process(_delta):
 func register_hit():
 	judged = true
 	queue_free()
+
+func register_miss():
+	judged = true
+	queue_free()

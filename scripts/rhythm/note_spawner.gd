@@ -3,31 +3,27 @@ extends Node
 var note_scene = preload("res://scenes/gameplay/Note.tscn")
 
 @onready var lanes = [
-	$"../CenterContainer/HBoxContainer/Lane1",
-	$"../CenterContainer/HBoxContainer/Lane2",
-	$"../CenterContainer/HBoxContainer/Lane3",
-	$"../CenterContainer/HBoxContainer/Lane4"
+	$"../CenterContainer/Playfield/HBoxContainer/Lane1",
+	$"../CenterContainer/Playfield/HBoxContainer/Lane2",
+	$"../CenterContainer/Playfield/HBoxContainer/Lane3",
+	$"../CenterContainer/Playfield/HBoxContainer/Lane4"
 ]
 
-@onready var judgement_line = $"../JudgementLine"
+@onready var judgement_line = $"../CenterContainer/Playfield/JudgementLine"
 @onready var audio_manager = $"../AudioManager"
+@onready var chart_manager = $"../ChartManager"
+
+var chart: Array = []
 
 var travel_time: float = 1.5
 
-var chart = [
-	{"time": 3.0, "lane": 0},
-	{"time": 4.0, "lane": 1},
-	{"time": 5.0, "lane": 2},
-	{"time": 6.0, "lane": 3},
-	{"time": 7.0, "lane": 0},
-	{"time": 8.0, "lane": 2},
-	{"time": 9.0, "lane": 1},
-	{"time": 10.0, "lane": 3}
-]
-
 var next_note_index: int = 0
 
+func _ready():
+	chart = chart_manager.get_notes()
 
+	print("NoteSpawner received ", chart.size(), " notes.")
+	
 func _process(_delta):
 	var song_time = audio_manager.get_song_time()
 
