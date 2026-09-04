@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3pfh1v11v36j"
+path="res://.godot/imported/UEFA EURO 2024 Intro (4K).wav-0aec850ef745e2b6c2ffe01fcfc1f0c1.sample"
+
+[deps]
+
+source_file="res://assets/audio/UEFA EURO 2024 Intro (4K).wav"
+dest_files=["res://.godot/imported/UEFA EURO 2024 Intro (4K).wav-0aec850ef745e2b6c2ffe01fcfc1f0c1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

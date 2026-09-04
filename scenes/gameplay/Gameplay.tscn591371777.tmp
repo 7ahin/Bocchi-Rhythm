@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://327d6ji1pg0o" path="res://scripts/rhythm/input_test.gd" id="1_e2rtc"]
 [ext_resource type="Script" uid="uid://c1pwiwhg6w5uu" path="res://scripts/rhythm/note_spawner.gd" id="2_hhfdu"]
-[ext_resource type="Script" uid="uid://dn2ffi6kngx7y" path="res://scripts/core/audio_manager.gd" id="3_ytj2m"]
-[ext_resource type="AudioStream" uid="uid://d3pfh1v11v36j" path="res://assets/audio/UEFA EURO 2024 Intro (4K).wav" id="4_jfjcr"]
-[ext_resource type="Script" uid="uid://75pomls1ekc6" path="res://scripts/rhythm/judgement_manager.gd" id="5_jfjcr"]
 
 [node name="Gameplay" type="Control" unique_id=96343168]
 layout_mode = 3
@@ -100,12 +97,3 @@ offset_bottom = 436.0
 
 [node name="NoteSpawner" type="Node" parent="." unique_id=1354776395]
 script = ExtResource("2_hhfdu")
-
-[node name="AudioManager" type="Node" parent="." unique_id=219984761]
-script = ExtResource("3_ytj2m")
-
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="AudioManager" unique_id=1115307180]
-stream = ExtResource("4_jfjcr")
-
-[node name="JudgementManager" type="Node" parent="." unique_id=319944895]
-script = ExtResource("5_jfjcr")
