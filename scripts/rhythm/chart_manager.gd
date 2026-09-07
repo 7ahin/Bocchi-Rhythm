@@ -1,21 +1,35 @@
 extends Node
 
-var chart_path: String = "res://data/charts/test_song.json"
-
 var chart_data: Dictionary = {}
 var notes: Array = []
 
+var chart_path: String = ""
 var is_loaded: bool = false
 
 
-func get_notes() -> Array:
-	if not is_loaded:
-		load_chart()
+func _ready():
+	chart_path = GameSession.selected_chart_path
 
-	return notes
+	if chart_path.is_empty():
+		push_error("GameSession has no selected chart path.")
+		return
+
+	print("Using chart: ", chart_path)
+
+	load_chart()
 
 
 func load_chart():
+	if is_loaded:
+		return
+
+	if chart_path.is_empty():
+		chart_path = GameSession.selected_chart_path
+
+	if chart_path.is_empty():
+		push_error("Chart path is empty.")
+		return
+
 	if not FileAccess.file_exists(chart_path):
 		push_error("Chart file not found: " + chart_path)
 		return
@@ -23,7 +37,7 @@ func load_chart():
 	var file = FileAccess.open(chart_path, FileAccess.READ)
 
 	if file == null:
-		push_error("Failed to open chart file.")
+		push_error("Failed to open chart file: " + chart_path)
 		return
 
 	var json_text = file.get_as_text()
@@ -48,3 +62,10 @@ func load_chart():
 		" | Notes: ",
 		notes.size()
 	)
+
+
+func get_notes() -> Array:
+	if not is_loaded:
+		load_chart()
+
+	return notes

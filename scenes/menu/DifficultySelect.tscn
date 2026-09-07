@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c7is34vrh0s0b"]
+
+[ext_resource type="Script" uid="uid://cnoxvh2vv0if1" path="res://scripts/ui/difficulty_select.gd" id="1_7jklv"]
+
+[node name="DifficultySelect" type="Control" unique_id=264420452]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jklv")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=559031232]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1715924436]
+layout_mode = 2
+
+[node name="SongTitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=569793155]
+layout_mode = 2
+text = "TEST SONG"
+
+[node name="ArtistLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=729040184]
+layout_mode = 2
+text = "Test Artist"
+
+[node name="EasyButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1514253537]
+layout_mode = 2
+text = "EASY"
+
+[node name="NormalButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1755402181]
+layout_mode = 2
+text = "NORMAL"
+
+[node name="HardButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1767691953]
+layout_mode = 2
+text = "HARD"
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=726177060]
+layout_mode = 2
+text = "PLAY"

@@ -20,9 +20,16 @@ var travel_time: float = 1.5
 var next_note_index: int = 0
 
 func _ready():
+	call_deferred("_initialize_chart")
+
+
+func _initialize_chart():
 	chart = chart_manager.get_notes()
 
 	print("NoteSpawner received ", chart.size(), " notes.")
+
+	if chart.is_empty():
+		push_error("NoteSpawner received an empty chart!")
 	
 func _process(_delta):
 	var song_time = audio_manager.get_song_time()

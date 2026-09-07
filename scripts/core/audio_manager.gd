@@ -6,16 +6,23 @@ var last_song_time: float = 0.0
 var debug_timer: float = 0.0
 
 func _ready():
-	if music_player.stream == null:
-		push_error("MusicPlayer has no audio Stream assigned!")
+	var audio_path = GameSession.selected_audio_path
+
+	if audio_path.is_empty():
+		push_error("GameSession has no selected audio path.")
 		return
 
-	print("Audio loaded: ", music_player.stream.resource_path)
+	if not ResourceLoader.exists(audio_path):
+		push_error("Audio file not found: " + audio_path)
+		return
+
+	music_player.stream = load(audio_path)
+
+	print("Audio loaded: ", audio_path)
 
 	music_player.play()
 
 	print("Music started!")
-
 
 func _process(delta):
 	if not music_player.playing:

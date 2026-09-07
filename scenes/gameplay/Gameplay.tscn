@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://75pomls1ekc6" path="res://scripts/rhythm/judgement_manager.gd" id="5_jfjcr"]
 [ext_resource type="Script" uid="uid://bcrhapcqkhl86" path="res://scripts/rhythm/score_manager.gd" id="6_73nc4"]
 [ext_resource type="Script" uid="uid://c1qyxw4dm6hyu" path="res://scripts/rhythm/chart_manager.gd" id="7_nf2y2"]
+[ext_resource type="Script" uid="uid://ctuipish8nvny" path="res://scripts/core/gameplay_manager.gd" id="8_hpjv0"]
+[ext_resource type="Script" path="res://scripts/core/pause_manager.gd" id="9_8q01y"]
 
 [node name="Gameplay" type="Control" unique_id=96343168]
 layout_mode = 3
@@ -162,5 +164,50 @@ text = "SCORE: 0
 layout_mode = 2
 text = "COMBO: 0"
 
+[node name="PauseMenu" type="Control" parent="HUD" unique_id=2111192455]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD/PauseMenu" unique_id=1850045870]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/PauseMenu/CenterContainer" unique_id=472854568]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PauseLabel" type="Label" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=2055109100]
+layout_mode = 2
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=458955936]
+layout_mode = 2
+text = "RESUME"
+
+[node name="RestartButton" type="Button" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=1631505855]
+layout_mode = 2
+text = "RESTART"
+
+[node name="SongSelectButton" type="Button" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=1292851480]
+layout_mode = 2
+text = "SONG SELECT"
+
 [node name="ChartManager" type="Node" parent="." unique_id=502492149]
 script = ExtResource("7_nf2y2")
+
+[node name="GameplayManager" type="Node" parent="." unique_id=220741225]
+script = ExtResource("8_hpjv0")
+
+[node name="PauseManager" type="Node" parent="." unique_id=1788635908]
+script = ExtResource("9_8q01y")

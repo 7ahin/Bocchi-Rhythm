@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://n22k30wulole"]
+
+[ext_resource type="Script" uid="uid://b4gis4tw800v3" path="res://scripts/ui/song_select.gd" id="1_thq54"]
+
+[node name="SongSelect" type="Control" unique_id=1058741207]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_thq54")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=939193390]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=386466280]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1045409746]
+layout_mode = 2
+text = "SELECT SONG
+"
+
+[node name="SongTitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=459546122]
+layout_mode = 2
+text = "TEST SONG
+"
+
+[node name="ArtistLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=740761528]
+layout_mode = 2
+text = "Test Artist
+"
+
+[node name="SelectButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=760798098]
+layout_mode = 2
+text = "SELECT"
