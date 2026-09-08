@@ -1,7 +1,11 @@
 extends Node
 
-@onready var score_label = $"../HUD/MarginContainer/VBoxContainer/ScoreLabel"
-@onready var combo_label = $"../HUD/MarginContainer/VBoxContainer/ComboLabel"
+@onready var score_label: Label = $"../HUD/MarginContainer/VBoxContainer/ScoreLabel"
+@onready var combo_label: Label = $"../HUD/MarginContainer/VBoxContainer/ComboLabel"
+
+@onready var song_title_label: Label = $"../HUD/MarginContainer/VBoxContainer/SongTitleLabel"
+@onready var difficulty_label: Label = $"../HUD/MarginContainer/VBoxContainer/DifficultyLabel"
+
 
 var score: int = 0
 var combo: int = 0
@@ -12,9 +16,18 @@ var great_count: int = 0
 var good_count: int = 0
 var miss_count: int = 0
 
+
+func _ready():
+	song_title_label.text = GameSession.selected_song_title
+	difficulty_label.text = GameSession.selected_difficulty.to_upper()
+
+	update_ui()
+
+
 func update_ui():
 	score_label.text = "SCORE: %d" % score
 	combo_label.text = "COMBO: %d" % combo
+
 
 func register_judgement(judgement: String):
 	match judgement:

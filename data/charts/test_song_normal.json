@@ -1,6 +1,7 @@
 {
   "song": "test_song",
   "title": "Test Song",
+  "difficulty": "normal",
   "notes": [
     { "time": 3.0, "lane": 0 },
     { "time": 4.0, "lane": 1 },

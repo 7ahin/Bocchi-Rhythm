@@ -1,0 +1,12 @@
+{
+    "id": "test_song_02",
+    "title": "Test Song 02",
+    "artist": "Test Artist",
+    "audio": "res://assets/audio/UEFA EURO 2024 Intro (4K).wav",
+    "difficulties": {
+      "normal": {
+        "chart": "res://data/charts/test_song_02.json",
+        "label": "NORMAL"
+      }
+    }
+  }

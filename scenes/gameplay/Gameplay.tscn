@@ -8,7 +8,71 @@
 [ext_resource type="Script" uid="uid://bcrhapcqkhl86" path="res://scripts/rhythm/score_manager.gd" id="6_73nc4"]
 [ext_resource type="Script" uid="uid://c1qyxw4dm6hyu" path="res://scripts/rhythm/chart_manager.gd" id="7_nf2y2"]
 [ext_resource type="Script" uid="uid://ctuipish8nvny" path="res://scripts/core/gameplay_manager.gd" id="8_hpjv0"]
-[ext_resource type="Script" path="res://scripts/core/pause_manager.gd" id="9_8q01y"]
+[ext_resource type="Script" uid="uid://dhwvvueplrr52" path="res://scripts/core/pause_manager.gd" id="9_8q01y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2yvp"]
+bg_color = Color(0.8509804, 0.50980395, 0.6745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13qdw"]
+bg_color = Color(0.9647059, 0.69803923, 0.8117647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3dsm"]
+bg_color = Color(0.27058825, 0.27058825, 0.3137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q01y"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thq54"]
+bg_color = Color(0.14117648, 0.14117648, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwj7d"]
+bg_color = Color(0.22745098, 0.22745098, 0.28235295, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3m2"]
+bg_color = Color(0.1882353, 0.1882353, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nud1"]
+bg_color = Color(0.1254902, 0.1254902, 0.16078432, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Gameplay" type="Control" unique_id=96343168]
 layout_mode = 3
@@ -18,6 +82,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e2rtc")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1620308433]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.09019608, 0.12156863, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2072561462]
 layout_mode = 1
@@ -48,6 +121,7 @@ layout_mode = 0
 offset_top = 430.0
 offset_right = 480.0
 offset_bottom = 436.0
+color = Color(0.9490196, 0.60784316, 0.7607843, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Playfield" unique_id=1871106761]
 layout_mode = 0
@@ -57,7 +131,7 @@ offset_bottom = 500.0
 [node name="Lane1" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=531778875]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
-color = Color(0.84630424, 0.11649465, 0.19610763, 1)
+color = Color(0.14117648, 0.14117648, 0.18431373, 1)
 
 [node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane1" unique_id=939328893]
 layout_mode = 1
@@ -74,7 +148,7 @@ horizontal_alignment = 1
 [node name="Lane2" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=1778894861]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
-color = Color(1, 0.654902, 0.8666667, 1)
+color = Color(0.14117648, 0.14117648, 0.18431373, 1)
 
 [node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane2" unique_id=988727883]
 layout_mode = 1
@@ -91,7 +165,7 @@ horizontal_alignment = 1
 [node name="Lane3" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=919824724]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
-color = Color(1, 1, 0.32156864, 1)
+color = Color(0.14117648, 0.14117648, 0.18431373, 1)
 
 [node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane3" unique_id=1264660446]
 layout_mode = 1
@@ -108,7 +182,7 @@ horizontal_alignment = 1
 [node name="Lane4" type="ColorRect" parent="CenterContainer/Playfield/HBoxContainer" unique_id=1908094802]
 custom_minimum_size = Vector2(120, 500)
 layout_mode = 2
-color = Color(0.2627451, 0.14117648, 1, 1)
+color = Color(0.14117648, 0.14117648, 0.18431373, 1)
 
 [node name="KeyLabel" type="Label" parent="CenterContainer/Playfield/HBoxContainer/Lane4" unique_id=1151312433]
 layout_mode = 1
@@ -155,23 +229,43 @@ offset_bottom = 96.0
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/MarginContainer" unique_id=16471478]
 layout_mode = 2
 
+[node name="SongTitleLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=778997348]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+text = "SONG"
+
+[node name="DifficultyLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=1768355678]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.72156864, 0.76862746, 1)
+text = "NORMAL"
+
 [node name="ScoreLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=2019088021]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
 text = "SCORE: 0
 "
 
 [node name="ComboLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=2085478737]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
 text = "COMBO: 0"
 
 [node name="PauseMenu" type="Control" parent="HUD" unique_id=2111192455]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="DimBackground" type="ColorRect" parent="HUD/PauseMenu" unique_id=2052315070]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.54901963)
 
 [node name="CenterContainer" type="CenterContainer" parent="HUD/PauseMenu" unique_id=1850045870]
 layout_mode = 1
@@ -182,25 +276,57 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/PauseMenu/CenterContainer" unique_id=472854568]
-custom_minimum_size = Vector2(240, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="PauseLabel" type="Label" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=2055109100]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+theme_override_font_sizes/font_size = 28
 text = "PAUSED"
 horizontal_alignment = 1
 
 [node name="ResumeButton" type="Button" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=458955936]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_disabled_color = Color(0.52156866, 0.52156866, 0.5647059, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m2yvp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s3dsm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8q01y")
 text = "RESUME"
 
 [node name="RestartButton" type="Button" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=1631505855]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_hover_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.4, 0.44705883, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_thq54")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uwj7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wm3m2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2nud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8q01y")
 text = "RESTART"
 
 [node name="SongSelectButton" type="Button" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=1292851480]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_hover_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.4, 0.44705883, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_thq54")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uwj7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wm3m2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2nud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8q01y")
 text = "SONG SELECT"
 
 [node name="ChartManager" type="Node" parent="." unique_id=502492149]

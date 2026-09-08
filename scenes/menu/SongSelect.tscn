@@ -2,6 +2,112 @@
 
 [ext_resource type="Script" uid="uid://b4gis4tw800v3" path="res://scripts/ui/song_select.gd" id="1_thq54"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.14117648, 0.14117648, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13qdw"]
+bg_color = Color(0.22745098, 0.22745098, 0.28235295, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1lj4"]
+bg_color = Color(0.1882353, 0.1882353, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njqwk"]
+bg_color = Color(0.14117648, 0.14117648, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wi6ju"]
+bg_color = Color(0.22745098, 0.22745098, 0.28235295, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25bs2"]
+bg_color = Color(0.1882353, 0.1882353, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1rnm"]
+bg_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2yvp"]
+bg_color = Color(0.8509804, 0.50980395, 0.6745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm0k6"]
+bg_color = Color(0.9647059, 0.69803923, 0.8117647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3dsm"]
+bg_color = Color(0.27058825, 0.27058825, 0.3137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q01y"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thq54"]
+bg_color = Color(0.14117648, 0.14117648, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwj7d"]
+bg_color = Color(0.22745098, 0.22745098, 0.28235295, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3m2"]
+bg_color = Color(0.1882353, 0.1882353, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nud1"]
+bg_color = Color(0.1254902, 0.1254902, 0.16078432, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="SongSelect" type="Control" unique_id=1058741207]
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +116,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_thq54")
+
+[node name="Background" type="ColorRect" parent="." unique_id=979694248]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.09019608, 0.12156863, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=939193390]
 layout_mode = 1
@@ -20,23 +135,77 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=386466280]
+custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1045409746]
 layout_mode = 2
-text = "SELECT SONG
-"
+theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+theme_override_font_sizes/font_size = 28
+text = "SELECT SONG"
+horizontal_alignment = 1
 
 [node name="SongTitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=459546122]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_font_sizes/font_size = 24
 text = "TEST SONG
 "
+horizontal_alignment = 1
 
 [node name="ArtistLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=740761528]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.72156864, 0.76862746, 1)
 text = "Test Artist
 "
+horizontal_alignment = 1
+
+[node name="NavigationContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=195556437]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PreviousButton" type="Button" parent="CenterContainer/VBoxContainer/NavigationContainer" unique_id=1936257747]
+custom_minimum_size = Vector2(150, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1lj4")
+text = "< PREVIOUS"
+
+[node name="NextButton" type="Button" parent="CenterContainer/VBoxContainer/NavigationContainer" unique_id=401838577]
+custom_minimum_size = Vector2(150, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_njqwk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wi6ju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_25bs2")
+text = "NEXT >"
 
 [node name="SelectButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=760798098]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_disabled_color = Color(0.52156866, 0.52156866, 0.5647059, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a1rnm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m2yvp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jm0k6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_s3dsm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8q01y")
 text = "SELECT"
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1667646700]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_hover_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.4, 0.44705883, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_thq54")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uwj7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wm3m2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2nud1")
+text = "BACK"

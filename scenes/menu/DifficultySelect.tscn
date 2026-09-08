@@ -2,6 +2,98 @@
 
 [ext_resource type="Script" uid="uid://cnoxvh2vv0if1" path="res://scripts/ui/difficulty_select.gd" id="1_7jklv"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.14117648, 0.14117648, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wi6ju"]
+bg_color = Color(0.44313726, 0.8352941, 0.89411765, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1lj4"]
+bg_color = Color(0.1882353, 0.1882353, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_njqwk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7f2x3"]
+bg_color = Color(0.9490196, 0.83137256, 0.36078432, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25bs2"]
+bg_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtrmx"]
+bg_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ae3m"]
+bg_color = Color(0.8509804, 0.50980395, 0.6745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3662s"]
+bg_color = Color(0.9647059, 0.69803923, 0.8117647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mpdc"]
+bg_color = Color(0.27058825, 0.27058825, 0.3137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thq54"]
+bg_color = Color(0.14117648, 0.14117648, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwj7d"]
+bg_color = Color(0.22745098, 0.22745098, 0.28235295, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3m2"]
+bg_color = Color(0.1882353, 0.1882353, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nud1"]
+bg_color = Color(0.1254902, 0.1254902, 0.16078432, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="DifficultySelect" type="Control" unique_id=264420452]
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +102,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jklv")
+
+[node name="Background" type="ColorRect" parent="." unique_id=616043730]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.09019608, 0.12156863, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=559031232]
 layout_mode = 1
@@ -20,28 +121,101 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1715924436]
+custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
+theme_override_constants/separation = 14
 
 [node name="SongTitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=569793155]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_font_sizes/font_size = 24
 text = "TEST SONG"
+horizontal_alignment = 1
 
 [node name="ArtistLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=729040184]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.72156864, 0.76862746, 1)
 text = "Test Artist"
+horizontal_alignment = 1
 
-[node name="EasyButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1514253537]
+[node name="DifficultyTitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2085337634]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+theme_override_font_sizes/font_size = 20
+text = "SELECT DIFFICULTY"
+horizontal_alignment = 1
+
+[node name="DifficultyContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=721300261]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="EasyButton" type="Button" parent="CenterContainer/VBoxContainer/DifficultyContainer" unique_id=1514253537]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wi6ju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1lj4")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_njqwk")
 text = "EASY"
 
-[node name="NormalButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1755402181]
+[node name="NormalButton" type="Button" parent="CenterContainer/VBoxContainer/DifficultyContainer" unique_id=1755402181]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7f2x3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1lj4")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_njqwk")
 text = "NORMAL"
 
-[node name="HardButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1767691953]
+[node name="HardButton" type="Button" parent="CenterContainer/VBoxContainer/DifficultyContainer" unique_id=1767691953]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_25bs2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1lj4")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_njqwk")
 text = "HARD"
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=726177060]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_pressed_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(0.09019608, 0.09019608, 0.12156863, 1)
+theme_override_colors/font_disabled_color = Color(0.52156866, 0.52156866, 0.5647059, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vtrmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7ae3m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3662s")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7mpdc")
 text = "PLAY"
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2064638243]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_pressed_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_hover_color = Color(0.96862745, 0.96862745, 0.98039216, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.4, 0.44705883, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_thq54")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uwj7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wm3m2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2nud1")
+text = "BACK"

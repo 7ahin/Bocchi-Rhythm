@@ -3,10 +3,21 @@
   "title": "Test Song",
   "artist": "Test Artist",
   "audio": "res://assets/audio/UEFA EURO 2024 Intro (4K).wav",
+
   "difficulties": {
+    "easy": {
+      "chart": "res://data/charts/test_song_easy.json",
+      "label": "EASY"
+    },
+
     "normal": {
-      "chart": "res://data/charts/test_song.json",
+      "chart": "res://data/charts/test_song_normal.json",
       "label": "NORMAL"
+    },
+
+    "hard": {
+      "chart": "res://data/charts/test_song_hard.json",
+      "label": "HARD"
     }
   }
 }

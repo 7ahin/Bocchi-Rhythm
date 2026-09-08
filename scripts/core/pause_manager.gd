@@ -55,12 +55,16 @@ func restart_game():
 	get_tree().paused = false
 	music_player.stream_paused = false
 
+	GameSession.reset_results()
+
 	get_tree().reload_current_scene()
 
 
 func go_to_song_select():
 	get_tree().paused = false
 	music_player.stream_paused = false
+
+	GameSession.reset_session()
 
 	get_tree().change_scene_to_file(
 		"res://scenes/menu/SongSelect.tscn"

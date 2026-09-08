@@ -3,9 +3,9 @@ extends Control
 @onready var song_title_label = $CenterContainer/VBoxContainer/SongTitleLabel
 @onready var artist_label = $CenterContainer/VBoxContainer/ArtistLabel
 
-@onready var easy_button = $CenterContainer/VBoxContainer/EasyButton
-@onready var normal_button = $CenterContainer/VBoxContainer/NormalButton
-@onready var hard_button = $CenterContainer/VBoxContainer/HardButton
+@onready var easy_button = $CenterContainer/VBoxContainer/DifficultyContainer/EasyButton
+@onready var normal_button = $CenterContainer/VBoxContainer/DifficultyContainer/NormalButton
+@onready var hard_button = $CenterContainer/VBoxContainer/DifficultyContainer/HardButton
 @onready var play_button = $CenterContainer/VBoxContainer/PlayButton
 
 
@@ -56,9 +56,13 @@ func select_difficulty(difficulty: String):
 
 
 func _on_play_pressed():
-	if GameSession.selected_chart_path.is_empty():
-		push_error("No chart selected.")
+	if GameSession.selected_difficulty.is_empty():
 		return
+
+	if GameSession.selected_chart_path.is_empty():
+		return
+
+	GameSession.reset_results()
 
 	get_tree().change_scene_to_file(
 		"res://scenes/gameplay/Gameplay.tscn"
