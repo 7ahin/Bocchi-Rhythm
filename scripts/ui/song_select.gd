@@ -127,11 +127,11 @@ func _on_select_pressed():
 		GameSession.selected_song_title
 	)
 
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/menu/DifficultySelect.tscn"
 	)
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/menu/MainMenu.tscn"
 	)

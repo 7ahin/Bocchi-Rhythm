@@ -46,9 +46,48 @@ func _process(_delta):
 
 
 func register_hit():
+	if judged:
+		return
+
 	judged = true
-	queue_free()
+
+	set_process(false)
+
+	pivot_offset = size / 2.0
+
+	color = Color("#F29BC2")
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		self,
+		"scale",
+		Vector2(1.35, 1.35),
+		0.07
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	tween.tween_callback(queue_free)
 
 func register_miss():
+	if judged:
+		return
+
+	judged = true
+	set_process(false)
+
+	pivot_offset = size / 2.0
+
+	color = Color("#E85D6A")
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		self,
+		"scale",
+		Vector2(0.7, 0.7),
+		0.08
+	)
+
+	tween.tween_callback(queue_free)
 	judged = true
 	queue_free()

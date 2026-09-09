@@ -56,6 +56,6 @@ func _finish_song():
 		GameSession.result_miss, " MISS"
 	)
 
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/results/Results.tscn"
 	)

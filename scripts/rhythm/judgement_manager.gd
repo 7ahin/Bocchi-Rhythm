@@ -8,18 +8,65 @@ const GOOD_WINDOW: float = 0.150
 @onready var score_manager = $"../ScoreManager"
 @onready var judgement_label = $"../CenterContainer/Playfield/JudgementLabel"
 
+var judgement_tween: Tween
+
 func _ready():
 	judgement_label.text = ""
 	judgement_label.visible = false
 
 func show_judgement(text: String):
+	if judgement_tween != null and judgement_tween.is_valid():
+		judgement_tween.kill()
+
 	judgement_label.text = text
 	judgement_label.visible = true
 
-	await get_tree().create_timer(0.4).timeout
+	match text:
+		"PERFECT":
+			judgement_label.modulate = Color("#F2D45C")
 
+		"GREAT":
+			judgement_label.modulate = Color("#71D5E4")
+
+		"GOOD":
+			judgement_label.modulate = Color("#F29BC2")
+
+		"MISS":
+			judgement_label.modulate = Color("#E85D6A")
+
+		_:
+			judgement_label.modulate = Color.WHITE
+
+	judgement_label.pivot_offset = judgement_label.size / 2.0
+
+	judgement_label.scale = Vector2(0.75, 0.75)
+
+	judgement_tween = create_tween()
+
+	judgement_tween.tween_property(
+		judgement_label,
+		"scale",
+		Vector2(1.15, 1.15),
+		0.08
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	judgement_tween.tween_property(
+		judgement_label,
+		"scale",
+		Vector2.ONE,
+		0.08
+	)
+
+	# Stay sekejap.
+	judgement_tween.tween_interval(0.22)
+
+	# Hide tanpa fade.
+	judgement_tween.tween_callback(_hide_judgement)
+
+func _hide_judgement():
 	judgement_label.visible = false
 	judgement_label.text = ""
+	judgement_label.scale = Vector2.ONE
 
 func _process(_delta):
 	var song_time = audio_manager.get_song_time()

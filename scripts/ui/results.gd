@@ -60,7 +60,7 @@ func calculate_grade() -> String:
 
 
 func _on_retry_pressed():
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/gameplay/Gameplay.tscn"
 	)
 
@@ -68,6 +68,6 @@ func _on_retry_pressed():
 func _on_song_select_pressed():
 	GameSession.reset_session()
 
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/menu/SongSelect.tscn"
 	)

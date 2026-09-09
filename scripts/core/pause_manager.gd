@@ -66,6 +66,6 @@ func go_to_song_select():
 
 	GameSession.reset_session()
 
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/menu/SongSelect.tscn"
 	)

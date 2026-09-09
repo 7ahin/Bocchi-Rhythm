@@ -14,7 +14,7 @@ func _ready():
 func _on_play_pressed():
 	GameSession.reset_session()
 
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/menu/SongSelect.tscn"
 	)
 

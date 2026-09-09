@@ -7,7 +7,7 @@ extends Control
 @onready var normal_button = $CenterContainer/VBoxContainer/DifficultyContainer/NormalButton
 @onready var hard_button = $CenterContainer/VBoxContainer/DifficultyContainer/HardButton
 @onready var play_button = $CenterContainer/VBoxContainer/PlayButton
-
+@onready var back_button: Button = $CenterContainer/VBoxContainer/BackButton
 
 func _ready():
 	print("DifficultySelect loaded!")
@@ -28,6 +28,7 @@ func _ready():
 	)
 
 	play_button.pressed.connect(_on_play_pressed)
+	back_button.pressed.connect(_on_back_pressed)
 
 	play_button.disabled = true
 
@@ -64,6 +65,13 @@ func _on_play_pressed():
 
 	GameSession.reset_results()
 
-	get_tree().change_scene_to_file(
+	SceneTransition.change_scene(
 		"res://scenes/gameplay/Gameplay.tscn"
+	)
+
+func _on_back_pressed():
+	GameSession.reset_difficulty()
+
+	SceneTransition.change_scene(
+		"res://scenes/menu/SongSelect.tscn"
 	)
