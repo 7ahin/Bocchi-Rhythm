@@ -21,6 +21,7 @@ GameSession="*res://scripts/core/game_session.gd"
 SongLibrary="*res://scripts/core/song_library.gd"
 SceneTransition="*res://scripts/core/scene_transition.gd"
 UiAudioManager="*res://scripts/core/ui_audio_manager.gd"
+ThemeManager="*res://scripts/core/theme_manager.gd"
 
 [display]
 

@@ -5,7 +5,10 @@ extends Node
 var last_song_time: float = 0.0
 var debug_timer: float = 0.0
 
+
 func _ready():
+	music_player.bus = "Music"
+
 	var audio_path = GameSession.selected_audio_path
 
 	if audio_path.is_empty():
@@ -17,12 +20,10 @@ func _ready():
 		return
 
 	music_player.stream = load(audio_path)
-
-	print("Audio loaded: ", audio_path)
-
 	music_player.play()
 
 	print("Music started!")
+
 
 func _process(delta):
 	if not music_player.playing:

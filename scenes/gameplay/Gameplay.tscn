@@ -176,6 +176,7 @@ script = ExtResource("3_ytj2m")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="AudioManager" unique_id=1115307180]
 stream = ExtResource("4_jfjcr")
+bus = &"Music"
 
 [node name="JudgementManager" type="Node" parent="." unique_id=319944895]
 script = ExtResource("5_jfjcr")
@@ -203,7 +204,7 @@ layout_mode = 2
 
 [node name="SongTitleLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=778997348]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+theme_type_variation = &"AccentLabel"
 text = "SONG"
 
 [node name="DifficultyLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=1768355678]
@@ -254,7 +255,7 @@ theme_override_constants/separation = 10
 
 [node name="PauseLabel" type="Label" parent="HUD/PauseMenu/CenterContainer/VBoxContainer" unique_id=2055109100]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+theme_type_variation = &"AccentLabel"
 theme_override_font_sizes/font_size = 28
 text = "PAUSED"
 horizontal_alignment = 1

@@ -35,7 +35,7 @@ theme_override_constants/separation = 14
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=418397585]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+theme_type_variation = &"AccentLabel"
 theme_override_font_sizes/font_size = 32
 text = "BOCCHI RHYTHM"
 horizontal_alignment = 1

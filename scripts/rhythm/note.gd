@@ -55,7 +55,7 @@ func register_hit():
 
 	pivot_offset = size / 2.0
 
-	color = Color("#F29BC2")
+	color = ThemeManager.get_accent_color()
 
 	var tween = create_tween()
 

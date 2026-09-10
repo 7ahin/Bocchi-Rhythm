@@ -10,6 +10,7 @@ func _ready():
 	settings_button.pressed.connect(_on_settings_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
 
+	# ThemeManager.apply_theme("nijika")
 
 func _on_play_pressed():
 	GameSession.reset_session()
@@ -20,7 +21,9 @@ func _on_play_pressed():
 
 
 func _on_settings_pressed():
-	print("Settings not implemented yet.")
+	SceneTransition.change_scene(
+		"res://scenes/menu/Settings.tscn"
+	)
 
 
 func _on_exit_pressed():

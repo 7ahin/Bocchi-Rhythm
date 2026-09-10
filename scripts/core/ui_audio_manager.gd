@@ -11,8 +11,14 @@ func _ready():
 	hover_player = AudioStreamPlayer.new()
 	click_player = AudioStreamPlayer.new()
 
+	hover_player.bus = "SFX"
+	click_player.bus = "SFX"
+
 	add_child(hover_player)
 	add_child(click_player)
+
+	hover_player.volume_db = -12.0
+	click_player.volume_db = -8.0
 
 	load_audio()
 
