@@ -4,12 +4,53 @@
   "difficulty": "normal",
   "notes": [
     { "time": 3.0, "lane": 0 },
-    { "time": 4.0, "lane": 1 },
-    { "time": 5.0, "lane": 2 },
-    { "time": 6.0, "lane": 3 },
-    { "time": 7.0, "lane": 0 },
-    { "time": 8.0, "lane": 2 },
-    { "time": 9.0, "lane": 1 },
-    { "time": 10.0, "lane": 3 }
+    { "time": 3.577, "lane": 1 },
+    { "time": 4.154, "lane": 2 },
+    { "time": 4.731, "lane": 3 },
+
+    { "time": 5.308, "lane": 1 },
+    { "time": 5.885, "lane": 2 },
+    { "time": 6.462, "lane": 0 },
+    { "time": 7.038, "lane": 3 },
+
+    { "time": 7.615, "lane": 0 },
+    { "time": 8.192, "lane": 1 },
+    { "time": 8.769, "lane": 2 },
+    { "time": 9.346, "lane": 3 },
+
+    { "time": 9.923, "lane": 1 },
+    { "time": 10.5, "lane": 2 },
+    { "time": 11.077, "lane": 0 },
+    { "time": 11.654, "lane": 3 },
+
+    { "time": 12.231, "lane": 0 },
+    { "time": 12.808, "lane": 1 },
+    { "time": 13.385, "lane": 2 },
+    { "time": 13.962, "lane": 3 },
+
+    { "time": 14.538, "lane": 1 },
+    { "time": 15.115, "lane": 2 },
+    { "time": 15.692, "lane": 0 },
+    { "time": 16.269, "lane": 3 },
+
+    { "time": 16.846, "lane": 0 },
+    { "time": 17.423, "lane": 1 },
+    { "time": 18.0, "lane": 2 },
+    { "time": 18.577, "lane": 3 },
+
+    { "time": 19.154, "lane": 1 },
+    { "time": 19.731, "lane": 2 },
+    { "time": 20.308, "lane": 0 },
+    { "time": 20.885, "lane": 3 },
+
+    { "time": 21.462, "lane": 0 },
+    { "time": 22.038, "lane": 1 },
+    { "time": 22.615, "lane": 2 },
+    { "time": 23.192, "lane": 3 },
+
+    { "time": 23.769, "lane": 1 },
+    { "time": 24.346, "lane": 2 },
+    { "time": 24.923, "lane": 0 },
+    { "time": 25.5, "lane": 3 }
   ]
 }

@@ -55,6 +55,35 @@ text = "Test Artist
 "
 horizontal_alignment = 1
 
+[node name="BPMLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2131916361]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.72156864, 0.76862746, 1)
+text = "BPM --"
+horizontal_alignment = 1
+
+[node name="DifficultyInfoContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=64559494]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="EasyInfoLabel" type="Label" parent="CenterContainer/VBoxContainer/DifficultyInfoContainer" unique_id=1293146090]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.44313726, 0.8352941, 0.89411765, 1)
+text = "EASY 2"
+horizontal_alignment = 1
+
+[node name="NormalInfoLabel" type="Label" parent="CenterContainer/VBoxContainer/DifficultyInfoContainer" unique_id=1705198229]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.83137256, 0.36078432, 1)
+text = "NORMAL 5"
+horizontal_alignment = 1
+
+[node name="HardInfoLabel" type="Label" parent="CenterContainer/VBoxContainer/DifficultyInfoContainer" unique_id=1542510670]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.60784316, 0.7607843, 1)
+text = "HARD 8"
+horizontal_alignment = 1
+
 [node name="NavigationContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=195556437]
 layout_mode = 2
 theme_override_constants/separation = 10

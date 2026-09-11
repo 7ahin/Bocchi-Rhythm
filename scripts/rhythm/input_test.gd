@@ -16,11 +16,12 @@ var lane_pressed_color: Color
 
 
 func _ready():
-	# Ambil warna character theme semasa.
-	lane_pressed_color = ThemeManager.get_accent_color()
+	lane_normal_color.a = 0.65
 
-	# Judgement line ikut character theme.
-	judgement_line.color = lane_pressed_color
+	lane_pressed_color = ThemeManager.get_accent_color()
+	lane_pressed_color.a = 0.72
+
+	judgement_line.color = ThemeManager.get_accent_color()
 
 	call_deferred("sync_judgement_line")
 

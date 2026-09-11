@@ -4,10 +4,28 @@
   "difficulty": "easy",
   "notes": [
     { "time": 3.0, "lane": 0 },
-    { "time": 4.5, "lane": 1 },
-    { "time": 6.0, "lane": 2 },
-    { "time": 7.5, "lane": 3 },
-    { "time": 9.0, "lane": 0 },
-    { "time": 10.5, "lane": 2 }
+    { "time": 4.154, "lane": 1 },
+    { "time": 5.308, "lane": 2 },
+    { "time": 6.462, "lane": 3 },
+
+    { "time": 7.615, "lane": 0 },
+    { "time": 8.769, "lane": 1 },
+    { "time": 9.923, "lane": 2 },
+    { "time": 11.077, "lane": 3 },
+
+    { "time": 12.231, "lane": 3 },
+    { "time": 13.385, "lane": 2 },
+    { "time": 14.538, "lane": 1 },
+    { "time": 15.692, "lane": 0 },
+
+    { "time": 16.846, "lane": 0 },
+    { "time": 18.0, "lane": 2 },
+    { "time": 19.154, "lane": 1 },
+    { "time": 20.308, "lane": 3 },
+
+    { "time": 21.462, "lane": 0 },
+    { "time": 22.615, "lane": 1 },
+    { "time": 23.769, "lane": 2 },
+    { "time": 24.923, "lane": 3 }
   ]
 }
